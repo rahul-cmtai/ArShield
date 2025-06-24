@@ -11,6 +11,8 @@ import BusinessPlan from "./pages/BusinessPlan";
 import CyberMythology from "./pages/CyberMythology";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import TimelineDemoPage from "./pages/TimelineDemoPage";
+import AnimatedCardDemo from "./pages/AnimatedCardDemo";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/business-plan" element={<BusinessPlan />} />
           <Route path="/cyber-mythology" element={<CyberMythology />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/timeline-demo" element={<TimelineDemoPage />} />
+          <Route path="/animated-cards" element={<AnimatedCardDemo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

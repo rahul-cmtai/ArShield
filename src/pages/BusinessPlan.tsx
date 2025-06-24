@@ -4,6 +4,7 @@ import { TrendingUp, Target, DollarSign, Users, Zap, Calendar } from 'lucide-rea
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { RoadmapTimeline } from '@/components/RoadmapTimeline';
 
 const BusinessPlan = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,7 @@ const BusinessPlan = () => {
         'Scale to 3 new regions',
         'Build strategic partnerships'
       ],
-      status: 'upcoming'
+      status: 'planned'
     },
     {
       year: '2027',
@@ -47,7 +48,7 @@ const BusinessPlan = () => {
         'International market entry',
         'R&D investment in quantum security'
       ],
-      status: 'upcoming'
+      status: 'planned'
     },
     {
       year: '2028',
@@ -59,7 +60,7 @@ const BusinessPlan = () => {
         'Industry recognition & awards',
         'IPO preparation phase'
       ],
-      status: 'upcoming'
+      status: 'planned'
     }
   ];
 
@@ -148,7 +149,7 @@ const BusinessPlan = () => {
         </div>
       </section>
 
-      {/* Roadmap Section */}
+      {/* Roadmap Section with Timeline */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -160,34 +161,7 @@ const BusinessPlan = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {roadmap.map((phase, index) => (
-              <Card key={index} className={`hover:shadow-xl transition-all duration-300 ${phase.status === 'current' ? 'border-arshield-orange border-2' : 'hover:border-arshield-orange/20'}`}>
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <Calendar className={`h-6 w-6 ${phase.status === 'current' ? 'text-arshield-orange' : 'text-gray-400'}`} />
-                    <span className={`text-sm font-semibold px-2 py-1 rounded ${phase.status === 'current' ? 'bg-arshield-orange text-white' : 'bg-gray-100 text-gray-600'}`}>
-                      {phase.status === 'current' ? 'Active' : 'Planned'}
-                    </span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-arshield-charcoal">{phase.year}</CardTitle>
-                  <CardDescription className="text-arshield-orange font-semibold">
-                    {phase.phase}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {phase.goals.map((goal, goalIndex) => (
-                      <li key={goalIndex} className="text-arshield-gray text-sm flex items-start space-x-2">
-                        <span className="text-arshield-orange text-xs mt-1">•</span>
-                        <span>{goal}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <RoadmapTimeline roadmapData={roadmap} />
         </div>
       </section>
 
@@ -225,7 +199,7 @@ const BusinessPlan = () => {
       </section>
 
       {/* Financial Projections */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-arshield-charcoal mb-4">
@@ -261,7 +235,7 @@ const BusinessPlan = () => {
             </table>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Key Strategies */}
       <section className="py-16 bg-arshield-charcoal text-white">

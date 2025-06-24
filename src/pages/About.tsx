@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from 'react';
-import { Shield, Users, Target, Eye, Award, Zap } from 'lucide-react';
+import { Target, Eye, Shield } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -9,38 +8,53 @@ const About = () => {
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Add animation styles
+    const styleEl = document.createElement('style');
+    styleEl.textContent = `
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(styleEl);
+    
+    return () => {
+      document.head.removeChild(styleEl);
+    };
   }, []);
 
   const team = [
     {
       name: 'Swapnil Rajepawar',
       role: 'Founder & CEO',
-      description: 'Visionary leader with expertise in cybersecurity strategy and business development.',
-      icon: Shield
+      description: 'Strategic visionary with 15+ years in cybersecurity. Specializes in enterprise security architecture and leads ArShield with innovation and expertise.',
     },
     {
       name: 'Preeti Sonar',
       role: 'Co-founder & Sales Head',
-      description: 'Expert in client relations and business growth strategies.',
-      icon: Users
+      description: 'Relationship builder with exceptional business acumen. Drives growth through strategic partnerships and ensures client success with tailored security solutions.',
     },
     {
       name: 'Amruta Rajepawar',
       role: 'Admin & HR Head',
-      description: 'Ensuring operational excellence and team development.',
-      icon: Award
+      description: 'Organizational mastermind who cultivates talent and maintains operational excellence. Creates a thriving workplace culture focused on innovation and growth.',
     },
     {
       name: 'Kumar Jay',
       role: 'CTO',
-      description: 'Technical architect leading innovation in cybersecurity solutions.',
-      icon: Zap
+      description: 'Technical genius with deep expertise in cutting-edge security technologies. Leads product development and ensures ArShield stays ahead of emerging threats.',
     },
     {
       name: 'Rahul',
       role: 'Cyber Analyst',
-      description: 'Frontline defender analyzing threats and vulnerabilities.',
-      icon: Eye
+      description: 'Security detective with keen analytical skills. Identifies vulnerabilities, investigates incidents, and implements proactive defense strategies to protect clients.',
     }
   ];
 
@@ -142,13 +156,24 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {team.map((member, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <member.icon className="h-12 w-12 text-arshield-orange mb-4" />
-                <h3 className="text-xl font-bold text-arshield-charcoal mb-2">{member.name}</h3>
-                <p className="text-arshield-orange font-semibold mb-4">{member.role}</p>
-                <p className="text-arshield-gray text-sm leading-relaxed">{member.description}</p>
+              <div 
+                key={index} 
+                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 
+                           hover:scale-110 hover:-translate-y-2 cursor-pointer"
+                style={{
+                  animation: `fadeIn 0.8s ease-out ${index * 0.2}s both`,
+                  transformOrigin: 'center'
+                }}
+              >
+                <div className="w-20 h-20 rounded-full bg-arshield-orange text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6 
+                              shadow-lg transform transition-transform duration-500 hover:rotate-12">
+                  {member.name.charAt(0)}
+                </div>
+                <h3 className="text-xl font-bold text-arshield-charcoal mb-3 text-center">{member.name}</h3>
+                <p className="text-arshield-orange font-semibold mb-4 text-center">{member.role}</p>
+                <p className="text-arshield-gray text-sm leading-relaxed text-center">{member.description}</p>
               </div>
             ))}
           </div>

@@ -23,7 +23,7 @@ const Footer = () => {
 
   const contact = [
     { icon: Mail, text: 'info@arshield.com', href: 'mailto:info@arshield.com' },
-    { icon: Phone, text: '+91 98765 43210', href: 'tel:+919876543210' },
+    { icon: Phone, text: '+91 99302 87895', href: 'tel:+919930287895' },
     { icon: MapPin, text: 'Mumbai, India', href: '#' }
   ];
 

@@ -120,7 +120,7 @@ const ServicesPreview = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <CardDescription className="text-arshield-subtext mb-3">
+                    <CardDescription className="text-black mb-3 text-lg">
                       {service.description}
                     </CardDescription>
                     <div className="text-sm font-medium text-arshield-orange opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">

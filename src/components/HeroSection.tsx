@@ -145,7 +145,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-gray-600 text-white hover:bg-gray-800 px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:border-orange-500/40"
+                className="border-2 border-gray-600 text-black hover:text-black hover:bg-gray-800 px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:border-orange-500/40"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Contact Us
