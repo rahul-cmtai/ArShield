@@ -75,7 +75,7 @@ const HeroSection = () => {
             >
               <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
               New
-              <span className="text-white">Advanced Threat Detection</span>
+              <span className="text-white">Cyber Intelligence Shield</span>
               <ArrowRight className="w-4 h-4" />
             </div>
 
