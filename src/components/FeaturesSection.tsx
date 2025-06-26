@@ -125,8 +125,8 @@ const FeaturesSection = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-arshield-subtext">🛡️ {feature.mythRef}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-black font-bold text-base">🛡️ {feature.mythRef}</span>
                   </div>
                   
                   <div className="bg-gradient-to-r from-arshield-orange/10 to-arshield-orange/5 rounded-lg p-3">
@@ -145,10 +145,10 @@ const FeaturesSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 text-arshield-orange font-medium hover:text-arshield-orange/80 transition-colors duration-300 cursor-pointer group">
+          <a href="/cyber-mythology" className="inline-flex items-center space-x-2 text-arshield-orange font-medium hover:text-arshield-orange/80 transition-colors duration-300 cursor-pointer group">
             <span>Discover All Features</span>
             <Shield className="h-5 w-5 group-hover:animate-shield-spin" />
-          </div>
+          </a>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   const contact = [
-    { icon: Mail, text: 'info@arshield.com', href: 'mailto:info@arshield.com' },
+    { icon: Mail, text: 'Info@arshieldtech.com', href: 'mailto:Info@arshieldtech.com' },
     { icon: Phone, text: '+91 99302 87895', href: 'tel:+919930287895' },
     { icon: MapPin, text: 'Mumbai, India', href: '#' }
   ];
@@ -121,7 +121,7 @@ const Footer = () => {
               © {currentYear} ArShield Cybertech Pvt. Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors duration-300">
                 Privacy Policy
               </a>
               <a href="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors duration-300">

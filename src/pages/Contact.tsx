@@ -1,12 +1,13 @@
-
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Shield } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Shield, MessageCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useWhatsApp } from '@/context/WhatsAppContext';
 
 const Contact = () => {
+  const { sendMessage } = useWhatsApp();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,20 +16,47 @@ const Contact = () => {
     service: '',
     message: ''
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const [result, setResult] = useState("");
+ 
+  // Web3Forms access key - replace with your actual key
+  const accessKey = "be29041c-4fb1-4a96-ba90-c139b00a2447";
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+    setResult("Sending....");
+    
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    // Add access key to form data
+    formData.append("access_key", accessKey);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResult("An error occurred while submitting the form");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -36,6 +64,11 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const handleWhatsAppContact = () => {
+    const message = "Hello ArShield, I'd like to discuss cybersecurity solutions for my business.";
+    sendMessage(message);
   };
 
   const contactInfo = [
@@ -48,13 +81,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 99302 87895 ', '+91 99302 87895'],
+      details: ['+91 99302 87895', '+91 99302 87895'],
       color: 'text-blue-600'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@arshield.com', 'contact@arshield.com'],
+      details: ['Info@arshieldtech.com', 'contact@arshield.com'],
       color: 'text-green-600'
     },
     {
@@ -92,10 +125,19 @@ const Contact = () => {
           <p className="text-xl text-arshield-subtext mb-8">
             Ready to fortify your digital defenses?
           </p>
-          <p className="text-lg text-arshield-gray max-w-3xl mx-auto">
+          <p className="text-lg text-arshield-gray max-w-3xl mx-auto mb-8">
             Get in touch with our cybersecurity experts for a consultation, security audit, 
             or to discuss your specific security needs. We're here to help protect your digital realm.
           </p>
+          <div className="flex justify-center space-x-4">
+            <Button 
+              className="bg-arshield-orange hover:bg-arshield-orange/80 text-white py-3 text-lg font-semibold"
+              onClick={handleWhatsAppContact}
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Chat on WhatsApp
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -138,6 +180,9 @@ const Contact = () => {
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Hidden input for Web3Forms access key */}
+                <input type="hidden" name="access_key" value={accessKey} />
+                
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-arshield-charcoal mb-2">
@@ -243,6 +288,18 @@ const Contact = () => {
                   <Send className="mr-2 h-5 w-5" />
                   Send Message
                 </Button>
+
+                {result && (
+                  <div className={`mt-4 p-3 rounded-lg text-center font-medium ${
+                    result === "Sending...." 
+                      ? "bg-blue-100 text-blue-700"
+                      : result === "Form Submitted Successfully" 
+                        ? "bg-green-100 text-green-700" 
+                        : "bg-red-100 text-red-700"
+                  }`}>
+                    {result}
+                  </div>
+                )}
               </form>
             </div>
 
@@ -299,10 +356,17 @@ const Contact = () => {
                 <p className="text-gray-300 mb-4">
                   Facing a security incident? Our emergency response team is available 24/7.
                 </p>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 mb-4">
                   <Phone className="h-5 w-5 text-arshield-orange" />
                   <span className="text-arshield-orange font-semibold">+91 99302 87895</span>
                 </div>
+                <Button 
+                  className="w-full bg-arshield-orange hover:bg-arshield-orange/80 text-white"
+                  onClick={handleWhatsAppContact}
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp Support
+                </Button>
               </div>
             </div>
           </div>

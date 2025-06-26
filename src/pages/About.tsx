@@ -33,28 +33,48 @@ const About = () => {
   const team = [
     {
       name: 'Swapnil Rajepawar',
-      role: 'Founder & CEO',
-      description: 'Strategic visionary with 15+ years in cybersecurity. Specializes in enterprise security architecture and leads ArShield with innovation and expertise.',
+      role: 'CEO / Founder - "Brahma"',
+      description: 'The creator of the universe. Strategic visionary with expertise in cybersecurity, leads ArShield with innovation and foundation.',
+      division: 'Leadership Core → "Council of Devas"'
     },
     {
       name: 'Preeti Sonar',
-      role: 'Co-founder & Sales Head',
-      description: 'Relationship builder with exceptional business acumen. Drives growth through strategic partnerships and ensures client success with tailored security solutions.',
+      role: 'Sales Head - "Narada"',
+      description: 'Goddess of arts, communication, and networking. Drives growth through strategic partnerships and ensures client success.',
+      division: 'Leadership Core → "Council of Devas"'
     },
     {
       name: 'Amruta Rajepawar',
-      role: 'Admin & HR Head',
-      description: 'Organizational mastermind who cultivates talent and maintains operational excellence. Creates a thriving workplace culture focused on innovation and growth.',
+      role: 'HR & Admin Head - "Yama"',
+      description: 'Lord of law, discipline, and justice. Represents fairness and governance in organizational excellence.',
+      division: 'Aditi Mandala - Circle of care and unity'
     },
     {
-      name: 'Kumar Jay',
-      role: 'CTO',
-      description: 'Technical genius with deep expertise in cutting-edge security technologies. Leads product development and ensures ArShield stays ahead of emerging threats.',
+      name: 'Rahul Survey',
+      role: 'Analyst - "Saraswati"',
+      description: 'Goddess of knowledge, logic, and analysis. Identifies vulnerabilities and implements proactive defense strategies.',
+      division: 'AI/Analytics Unit → "Saraswati Insight Engine"'
     },
     {
-      name: 'Rahul',
-      role: 'Cyber Analyst',
-      description: 'Security detective with keen analytical skills. Identifies vulnerabilities, investigates incidents, and implements proactive defense strategies to protect clients.',
+      name: 'Jai Kumar Choudhary',
+      role: 'CTO - "Vishwakarma"',
+      description: 'Divine engineer and craftsman. Technical genius with expertise in cutting-edge security technologies.',
+      division: 'Engineering Dept → "Forge of Vishwakarma"'
+    }
+  ];
+
+  const additionalTeam = [
+    {
+      name: 'Dr. Gandhi',
+      role: 'CISO - "Narasimha"',
+      description: 'Fierce protector and incarnation of Vishnu. Leads cybersecurity operations with vigilance and power.',
+      division: 'Cybersecurity Division → "Shield of Narasimha"'
+    },
+    {
+      name: 'Tejas Lakharia',
+      role: 'Project Head - "Skanda"',
+      description: 'Commander-in-chief. Manages projects with strategic precision and tactical expertise.',
+      division: 'Engineering Dept → "Forge of Vishwakarma"'
     }
   ];
 
@@ -156,14 +176,53 @@ const About = () => {
             </p>
           </div>
           
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-arshield-charcoal inline-flex gap-2 md:gap-4">
+              <span className="text-4xl text-arshield-orange">S</span>
+              <span className="text-4xl text-arshield-orange">P</span>
+              <span className="text-4xl text-arshield-orange">A</span>
+              <span className="text-4xl text-arshield-orange">R</span>
+              <span className="text-4xl text-arshield-orange">K</span>
+            </h3>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {team.map((member, index) => (
               <div 
                 key={index} 
                 className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 
-                           hover:scale-110 hover:-translate-y-2 cursor-pointer"
+                           hover:scale-105 hover:-translate-y-2 cursor-pointer"
                 style={{
                   animation: `fadeIn 0.8s ease-out ${index * 0.2}s both`,
+                  transformOrigin: 'center'
+                }}
+              >
+                <div className="w-20 h-20 rounded-full bg-arshield-orange text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6 
+                              shadow-lg transform transition-transform duration-500 hover:rotate-12">
+                  {index === 4 ? "K" : member.name.charAt(0)}
+                </div>
+                <h3 className="text-xl font-bold text-arshield-charcoal mb-3 text-center">{member.name}</h3>
+                <p className="text-arshield-orange font-semibold mb-2 text-center">{member.role}</p>
+                <p className="text-sm text-arshield-charcoal/70 mb-4 text-center italic">{member.division}</p>
+                <p className="text-arshield-gray text-sm leading-relaxed text-center">{member.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-16 mb-8 text-center">
+            <h3 className="text-2xl font-bold text-arshield-charcoal">
+              Additional Team Members
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {additionalTeam.map((member, index) => (
+              <div 
+                key={index} 
+                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 
+                           hover:scale-105 hover:-translate-y-2 cursor-pointer"
+                style={{
+                  animation: `fadeIn 0.8s ease-out ${index * 0.2 + 1}s both`,
                   transformOrigin: 'center'
                 }}
               >
@@ -172,7 +231,8 @@ const About = () => {
                   {member.name.charAt(0)}
                 </div>
                 <h3 className="text-xl font-bold text-arshield-charcoal mb-3 text-center">{member.name}</h3>
-                <p className="text-arshield-orange font-semibold mb-4 text-center">{member.role}</p>
+                <p className="text-arshield-orange font-semibold mb-2 text-center">{member.role}</p>
+                <p className="text-sm text-arshield-charcoal/70 mb-4 text-center italic">{member.division}</p>
                 <p className="text-arshield-gray text-sm leading-relaxed text-center">{member.description}</p>
               </div>
             ))}

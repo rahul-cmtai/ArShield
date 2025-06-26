@@ -137,10 +137,10 @@ const ServicesPreview = () => {
           <p className="text-arshield-subtext mb-6">
             Ready to fortify your digital kingdom?
           </p>
-          <div className="inline-flex items-center space-x-2 text-arshield-orange font-medium hover:text-arshield-orange/80 transition-colors duration-300 cursor-pointer group">
+          <a href="/services" className="inline-flex items-center space-x-2 text-arshield-orange font-medium hover:text-arshield-orange/80 transition-colors duration-300 cursor-pointer group">
             <span>View All Services</span>
             <Shield className="h-5 w-5 group-hover:animate-shield-spin" />
-          </div>
+          </a>
         </div>
       </div>
     </section>

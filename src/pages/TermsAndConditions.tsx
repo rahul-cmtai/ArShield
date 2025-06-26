@@ -169,7 +169,7 @@ const TermsAndConditions = () => {
                   If you have any questions about these terms and conditions, please contact us at:
                 </p>
                 <div className="mt-2 text-gray-600">
-                  <p>Email: info@arshield.com</p>
+                  <p>Email: Info@arshieldtech.com</p>
                   <p>Phone: +91 99302 87895</p>
                   <p>Address: Mumbai, India</p>
                 </div>
