@@ -1,9 +1,9 @@
-
 import { useEffect, useState } from 'react';
-import { Shield, Eye, Lock, Users, Zap, Brain, Cloud, Search } from 'lucide-react';
+import { Shield, Eye, Lock, Users, Zap, Brain, Cloud, Search, ExternalLink, Radar, RefreshCw, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -177,6 +177,214 @@ const Services = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VAPT Services Detail Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-arshield-charcoal mb-4">
+              VAPT <span className="text-gradient">Services</span>
+            </h2>
+            <p className="text-arshield-gray text-lg max-w-3xl mx-auto">
+              Our comprehensive Vulnerability Assessment & Penetration Testing services help identify, analyze, and remediate security weaknesses in your infrastructure.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Internal PT */}
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-arshield-orange/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                  <Lock className="h-8 w-8 text-blue-600" />
+                </div>
+                <CardTitle className="text-xl text-arshield-charcoal">Internal Penetration Testing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-arshield-gray mb-4">
+                  Evaluate risks if an attacker gains internal access (post-breach scenario).
+                </p>
+                <ul className="space-y-2">
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Simulates insider threats and lateral movement</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Identifies privilege escalation paths</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Tests internal network segmentation</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* External PT */}
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-arshield-orange/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-red-50 rounded-lg flex items-center justify-center mb-4">
+                  <ExternalLink className="h-8 w-8 text-red-600" />
+                </div>
+                <CardTitle className="text-xl text-arshield-charcoal">External Penetration Testing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-arshield-gray mb-4">
+                  Identifies vulnerabilities that could be exploited by external attackers.
+                </p>
+                <ul className="space-y-2">
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Tests public-facing infrastructure</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Evaluates web applications and APIs</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Identifies perimeter security weaknesses</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Vulnerability Assessment */}
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-arshield-orange/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+                  <Radar className="h-8 w-8 text-green-600" />
+                </div>
+                <CardTitle className="text-xl text-arshield-charcoal">Vulnerability Assessment</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-arshield-gray mb-4">
+                  Automated scanning of IT infrastructure for known vulnerabilities.
+                </p>
+                <ul className="space-y-2">
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Covers servers, endpoints, databases, network devices, and applications</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Based on updated vulnerability databases (CVEs, threat intelligence feeds)</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Provides a prioritized list of known security flaws and misconfigurations</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Vulnerability Management */}
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-arshield-orange/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-purple-50 rounded-lg flex items-center justify-center mb-4">
+                  <RefreshCw className="h-8 w-8 text-purple-600" />
+                </div>
+                <CardTitle className="text-xl text-arshield-charcoal">Vulnerability Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-arshield-gray mb-4">
+                  Continuous lifecycle management of vulnerabilities from detection to closure.
+                </p>
+                <ul className="space-y-2">
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Includes risk scoring, remediation tracking, and revalidation of fixed issues</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Helps meet compliance requirements and align with cybersecurity frameworks (ISO 27001, NIST, etc.)</span>
+                  </li>
+                  <li className="text-arshield-gray text-sm flex items-start space-x-2">
+                    <span className="text-arshield-orange text-xs mt-1">•</span>
+                    <span>Ensures ongoing risk reduction and security posture improvement</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Deliverables */}
+          <div className="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h3 className="text-2xl font-bold text-arshield-charcoal mb-6">
+              <CheckCircle className="inline-block mr-2 text-arshield-orange" size={24} />
+              Deliverables
+            </h3>
+            <ul className="space-y-3 pl-10">
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Executive summary and technical report</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Detailed findings with severity ratings (CVSS-based)</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Proof-of-concept for exploited vulnerabilities</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Step-by-step remediation guidelines</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Optional remediation validation test</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Mitigation Support */}
+          <div className="bg-arshield-orange/10 p-8 rounded-lg shadow-lg mb-12">
+            <h3 className="text-2xl font-bold text-arshield-charcoal mb-4">Mitigation Support</h3>
+            <p className="text-arshield-gray mb-6">
+              We provide a private streaming channel (e.g., YouTube) with a comprehensive library of resources for patching identified vulnerabilities. 
+              These resources are organized by category and are referenced in our reports as "Good Reads" for your team.
+            </p>
+            <p className="text-arshield-gray font-semibold">
+              Access is request-based and exclusive to our clients.
+            </p>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold text-arshield-charcoal mb-6">
+              <Zap className="inline-block mr-2 text-arshield-orange" size={24} />
+              Why Choose Us?
+            </h3>
+            <ul className="grid md:grid-cols-2 gap-4">
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Certified ethical hackers (CEH, OSCP, etc.)</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Proven methodologies (OWASP, PTES, NIST)</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Custom scope based on client environment</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Zero downtime, non-intrusive testing</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>Post-assessment guidance and support</span>
+              </li>
+              <li className="text-arshield-gray flex items-start">
+                <span className="text-arshield-orange font-bold mr-2">•</span>
+                <span>30-Day Money-Back Guarantee <Link to="/terms-and-conditions" className="text-arshield-orange hover:underline text-sm">(Terms & Conditions apply)</Link></span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

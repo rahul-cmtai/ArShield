@@ -1,4 +1,3 @@
-
 import { Shield, Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -125,8 +124,8 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                Terms of Service
+              <a href="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors duration-300">
+                Terms & Conditions
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
                 Security
