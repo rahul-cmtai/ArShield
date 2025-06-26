@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center group cursor-pointer">
             <img 
-              src="/logo.png" 
+              src={scrolled ? "/logo.png" : "/logo1.png"}
               alt="ArShield Logo" 
               className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
             />
@@ -100,9 +100,9 @@ const Navbar = () => {
               <div className="flex flex-col space-y-6 mt-8">
                 <div className="mb-4">
                   <img 
-                    src="/logo.png" 
+                    src={scrolled ? "/logo.png" : "/logo1.png"}
                     alt="ArShield Logo" 
-                    className="h-12 w-auto"
+                    className="h-16 w-auto"
                   />
                 </div>
                 {navigation.map((item) => (
