@@ -94,21 +94,20 @@ const CTASection = () => {
 
           {/* Trust Indicators */}
           <div className="border-t border-white/10 pt-8">
-            <p className="text-gray-400 mb-4">Trusted by leading enterprises worldwide</p>
-            <div className="flex items-center justify-center space-x-8 text-gray-500">
-              <div className="text-2xl font-bold">500+</div>
-              <div className="w-px h-8 bg-gray-600"></div>
-              <div className="text-2xl font-bold">99.9%</div>
-              <div className="w-px h-8 bg-gray-600"></div>
-              <div className="text-2xl font-bold">24/7</div>
-              <div className="w-px h-8 bg-gray-600"></div>
-              <div className="text-2xl font-bold">50+</div>
-            </div>
-            <div className="flex items-center justify-center space-x-8 text-xs text-gray-400 mt-2">
-              <span>Enterprises</span>
-              <span>Uptime</span>
-              <span>Support</span>
-              <span>Countries</span>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                {[
+                  { number: '500+', label: 'Enterprises' },
+                  { number: '99.9%', label: 'Uptime' },
+                  { number: '24/7', label: 'Support' },
+                  { number: '100%', label: 'Commitment' }
+                ].map((stat, index) => (
+                  <div key={index} className="space-y-2">
+                    <div className="text-3xl font-bold text-arshield-orange">{stat.number}</div>
+                    <div className="text-gray-300">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

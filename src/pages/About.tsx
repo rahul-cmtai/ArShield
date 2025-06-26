@@ -71,7 +71,7 @@ const About = () => {
       division: 'Cybersecurity Division → "Shield of Narasimha"'
     },
     {
-      name: 'Tejas Lakharia',
+      name: 'Tejas Lakhtaria',
       role: 'Project Head - "Skanda"',
       description: 'Commander-in-chief. Manages projects with strategic precision and tactical expertise.',
       division: 'Engineering Dept → "Forge of Vishwakarma"'
