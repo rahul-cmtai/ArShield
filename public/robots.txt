@@ -1,14 +1,5 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# robots.txt for ArShield
+# Allow all bots and reference sitemap
 User-agent: *
 Allow: /
+Sitemap: https://arshield.in/sitemap.xml
