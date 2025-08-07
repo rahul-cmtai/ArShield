@@ -66,7 +66,7 @@ const About = () => {
 
   const additionalTeam = [
     {
-      name: 'Dr. Gandhi',
+      name: 'Dr. Sree',
       role: 'CISO - "Narasimha"',
       description: 'Fierce protector and incarnation of Vishnu. Leads cybersecurity operations with vigilance and power.',
       division: 'Cybersecurity Division → "Shield of Narasimha"'

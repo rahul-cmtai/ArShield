@@ -20,6 +20,7 @@ const Services = () => {
       color: 'text-arshield-orange',
       bgColor: 'bg-arshield-orange/10',
       mythology: 'Lakshman Rekha Protection',
+      id: 'security-solutions',
       services: [
         'Network Security (Firewalls, IDS/IPS)',
         'Endpoint Security (EDR, XDR)',
@@ -34,6 +35,7 @@ const Services = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       mythology: 'Dharma Guardian',
+      id: 'compliance-risk-management',
       services: [
         'VAPT (Vulnerability Assessment & Penetration Testing)',
         'Threat Hunting & Analysis',
@@ -48,6 +50,7 @@ const Services = () => {
       color: 'text-green-600',
       bgColor: 'bg-green-50',
       mythology: 'Krishna\'s Divine Vision',
+      id: 'managed-security-services',
       services: [
         '24x7 Threat Monitoring',
         'SIEM (Security Information & Event Management)',
@@ -62,6 +65,7 @@ const Services = () => {
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       mythology: 'Guru Dronacharya Training',
+      id: 'cyber-awareness-training',
       services: [
         'Phishing Simulation & Awareness',
         'Red Team/Blue Team Exercises',
@@ -76,6 +80,7 @@ const Services = () => {
       color: 'text-red-600',
       bgColor: 'bg-red-50',
       mythology: 'Hanuman\'s Intelligence',
+      id: 'emerging-tech-security',
       services: [
         'AI/ML in Cybersecurity',
         'Blockchain Security Solutions',
@@ -90,6 +95,7 @@ const Services = () => {
       color: 'text-indigo-600',
       bgColor: 'bg-indigo-50',
       mythology: 'Vidura\'s Wisdom',
+      id: 'consulting-services',
       services: [
         'Security Architecture Design',
         'Cybersecurity Strategy Development',
@@ -166,27 +172,35 @@ const Services = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 hover:border-arshield-orange/20">
-                  <CardHeader>
-                    <div className={`w-16 h-16 ${service.bgColor} rounded-lg flex items-center justify-center mb-4`}>
-                      <service.icon className={`h-8 w-8 ${service.color}`} />
+                <Link key={index} to={`/services/${service.id}`} className="block">
+                  <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 hover:border-arshield-orange/20">
+                    <CardHeader>
+                      <div className={`w-16 h-16 ${service.bgColor} rounded-lg flex items-center justify-center mb-4`}>
+                        <service.icon className={`h-8 w-8 ${service.color}`} />
+                      </div>
+                      <CardTitle className="text-xl text-arshield-charcoal">{service.category}</CardTitle>
+                      <CardDescription className="text-arshield-orange font-semibold">
+                        {service.mythology}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        {service.services.map((item, serviceIndex) => (
+                          <li key={serviceIndex} className="text-arshield-gray text-sm flex items-start space-x-2">
+                            <span className="text-arshield-orange text-xs mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                    <div className="px-6 pb-4 flex justify-end">
+                      <span className="text-arshield-orange text-sm flex items-center">
+                        View Details
+                        <ExternalLink className="ml-1 h-3 w-3" />
+                      </span>
                     </div>
-                    <CardTitle className="text-xl text-arshield-charcoal">{service.category}</CardTitle>
-                    <CardDescription className="text-arshield-orange font-semibold">
-                      {service.mythology}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {service.services.map((item, serviceIndex) => (
-                        <li key={serviceIndex} className="text-arshield-gray text-sm flex items-start space-x-2">
-                          <span className="text-arshield-orange text-xs mt-1">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>

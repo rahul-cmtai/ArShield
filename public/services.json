@@ -1,0 +1,435 @@
+{
+    "services": [
+      {
+        "id": "security-solutions",
+        "title": "Security Solutions",
+        "description": "Comprehensive security solutions to protect your digital assets",
+        "mythology": "Lakshman Rekha Protection",
+        "domains": [
+          {
+            "name": "WEB SECURITY",
+            "products": [
+              {
+                "name": "Cloud DNS",
+                "technology": "FlashStart",
+                "oem": "FlashStart",
+                "useCases": [
+                  "Web filtering for on premise users",
+                  "Web filtering for remote / work from home users",
+                  "Replacement for on premise web proxy & UTM Filtering"
+                ],
+                "keyFeatures": [
+                  "DNS based filtering",
+                  "Malware rpotection",
+                  "SAAS offering",
+                  "End point agent",
+                  "Simplified Management Console",
+                  "AD Integration",
+                  "Mobile Protection",
+                  "Geoblocking support",
+                  "Local node in Mumbai, India"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "IDENTITY & ACCESS PROTECTION",
+            "products": [
+              {
+                "name": "Secure Access / ZTNA",
+                "technology": "SecureShield",
+                "oem": "Block Armour",
+                "useCases": [
+                  "Secure Remote Access",
+                  "Work From Home",
+                  "Hybrid eco-system access",
+                  "Zero-Trust Security",
+                  "MFA",
+                  "Compliance coverage",
+                  "VPN replacement",
+                  "NAC replacement"
+                ],
+                "keyFeatures": [
+                  "Robust Authentication with MFA",
+                  "Military grade Encryption",
+                  "Protection against Zero Day Vulnerabilities",
+                  "Scalable and redundant architecture",
+                  "On-prem & cloud based flexible deployment",
+                  "Tamperproof logs"
+                ]
+              },
+              {
+                "name": "IDAM",
+                "technology": "ARCON IDAM",
+                "oem": "ARCON",
+                "useCases": [
+                  "Seamless user on-boarding & deboarding",
+                  "Prevent rogue access to resources",
+                  "Easy user mgmt"
+                ],
+                "keyFeatures": [
+                  "Authentication Federation",
+                  "Account Life Cycle Mgmt",
+                  "SSO & MFA",
+                  "Seesion Monitoring",
+                  "Password Mgmt",
+                  "Identity Governence & Administation",
+                  "Customizable workflows"
+                ]
+              },
+              {
+                "name": "IDAM",
+                "technology": "Akku IDAM",
+                "oem": "Akku",
+                "useCases": [
+                  "Automation of employee on-boarding & deboarding",
+                  "Role based user access changes & elevatiotions management",
+                  "Single Sign-On",
+                  "User Self-Service Portal",
+                  "Identity Governance reporting for complaince"
+                ],
+                "keyFeatures": [
+                  "Automated employee on-boarding / deboarding",
+                  "Integartion with various on-premise, SAAS applications",
+                  "Single Sign-On & MFA",
+                  "User Self-Service Portal",
+                  "Device, IP, Go location based access control",
+                  "VPN Detection and Restriction",
+                  "Compliance standard reporting"
+                ]
+              },
+              {
+                "name": "PAM",
+                "technology": "ARCON PAM",
+                "oem": "ARCON",
+                "useCases": [
+                  "PIM / PAM",
+                  "Compliance (RBI / IRDA / SEBI / PCI / ISO / GDPR, etc.)"
+                ],
+                "keyFeatures": [
+                  "Privilege user / access mgmt",
+                  "Session recording",
+                  "Live streaming",
+                  "Password Mgmt",
+                  "SSO",
+                  "OTP",
+                  "session control"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "EMAIL SECURITY",
+            "products": [
+              {
+                "name": "DMARC, DKIM, SPF, BIMI",
+                "technology": "EmailAuth",
+                "oem": "Infosec Ventures",
+                "useCases": [
+                  "Securing email domain identity",
+                  "Avoiding email account spoofing",
+                  "Avoiding brand abuse through email",
+                  "Avoid your emails getting blocked by receivers server"
+                ],
+                "keyFeatures": [
+                  "Imrpoves email delivery success ratio",
+                  "Boosts trust level of email",
+                  "Visibility of illegitimate emails sent using your domain or email ID",
+                  "Offers data modeling and global threat intel",
+                  "Uses machine learning"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "APPLICATION SECURITY",
+            "products": [
+              {
+                "name": "API SECURITY",
+                "technology": "WALLARM",
+                "oem": "Warram Inc",
+                "useCases": [
+                  "API Protection",
+                  "API Attack Surface Mgmt",
+                  "API Testing"
+                ],
+                "keyFeatures": [
+                  "API Auto Discovery",
+                  "API traffic monitoring",
+                  "Supports in-line & out of band architecture",
+                  "Supports on-remise, Cloud, SAAS all kind of applications",
+                  "Offers complete API attack surface mgmt capabilities",
+                  "Also offers API testing tool"
+                ]
+              },
+              {
+                "name": "WAF (Web Application Firewall)",
+                "technology": "Edgenexus WAF",
+                "oem": "Edgenexus",
+                "useCases": [
+                  "Cost effective alternative to F5, Palo Alto, etc.",
+                  "Easy to manage WAF - best fit for beginners and customers with limited technical expertise",
+                  "Supports different application environments, on-premose, cloud, Hybrid, etc."
+                ],
+                "keyFeatures": [
+                  "Easy to configure amd manage",
+                  "Available as Virtual Appliance, as well as Cloud Applicance",
+                  "Provides realtime analytics",
+                  "Seamless policy configuration",
+                  "AI driven theat detection",
+                  "DDoS attack mitigation",
+                  "Zero-Day attack defense",
+                  "Highly scalable and flexible architecure"
+                ]
+              },
+              {
+                "name": "ADC / Server Load Balancer",
+                "technology": "Edgenexus ADC",
+                "oem": "Edgenexus",
+                "useCases": [
+                  "Server load balancing",
+                  "Application load balancing",
+                  "Reverse Proxy Security"
+                ],
+                "keyFeatures": [
+                  "Layer 4 / 7 load balancing",
+                  "Instant clustering",
+                  "Reverse Proxy",
+                  "SSL Offload & re-encryption",
+                  "Web acceleration",
+                  "Compression & Caching",
+                  "GSLB",
+                  "Integrated Applications using EdgeContainers and Edgenexus App Store",
+                  "FlightPATH traffic mgmt"
+                ]
+              },
+              {
+                "name": "GSLB",
+                "technology": "Edgenexus GSLB",
+                "oem": "Edgenexus",
+                "useCases": [
+                  "Load balance across data centres",
+                  "Protect your organizations against data center outage",
+                  "Mix and match with on-premise <> Cloud, Cloud<> Cloud and Hybrid"
+                ],
+                "keyFeatures": [
+                  "Easy to configure",
+                  "Integrates into EdgeADC containers or available as a standalone application using free EADP platform",
+                  "Uses integrated authoritative DNS server",
+                  "Can fail over on DC failure, or virtual service failure when integrated with EdgeADC"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DATA SECURITY",
+            "products": [
+              {
+                "name": "UEBA",
+                "technology": "ARCON UBA",
+                "oem": "ARCON",
+                "useCases": [
+                  "Insider Threat Protection",
+                  "DLP",
+                  "Employee Monitoring"
+                ],
+                "keyFeatures": [
+                  "Application Control",
+                  "Privilege escalation",
+                  "Facial Biometric",
+                  "Rule based alerting",
+                  "Device control"
+                ]
+              },
+              {
+                "name": "Insider Threat Protection",
+                "technology": "Cerebral / Vision",
+                "oem": "Veriato Inc",
+                "useCases": [
+                  "Insider Threat Protection",
+                  "Employee Productivity Monitoring",
+                  "User activity audit / investigation"
+                ],
+                "keyFeatures": [
+                  "User activity monitoring",
+                  "Rule based alerting",
+                  "Pschycolinguisitcs",
+                  "Geofencing",
+                  "Email, Web, Chat, Colaboration platform monitoring",
+                  "User productivity reporting"
+                ]
+              },
+              {
+                "name": "DSPM & DLP",
+                "technology": "Strac DLP",
+                "oem": "Strac",
+                "useCases": [
+                  "Scan & Remediate sensitive files in Cloud SaaS apps",
+                  "Scan & Remediate sensitive files in Cloud SaaS apps",
+                  "Scan & Remediate sensitive data in Email & CRM",
+                  "Scan & Block sensitive file uploads/text in Browsers and Endpoints",
+                  "Scan & Remediate sensitive data in Cloud Infrastructure"
+                ],
+                "keyFeatures": [
+                  "Discovery of strctured and un-structuresd data",
+                  "Data classification using machine learning & OCR models",
+                  "Realtime auto remediation of data leakage"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compliance-risk-management",
+        "title": "Compliance & Risk Management",
+        "description": "Comprehensive risk management and compliance solutions",
+        "mythology": "Dharma Guardian",
+        "domains": [
+          {
+            "name": "CYBER RISK PROTECTION & MGMT",
+            "products": [
+              {
+                "name": "Brand Protection & Online Threat Hunting",
+                "technology": "BrandShield",
+                "oem": "BrandShield",
+                "useCases": [
+                  "Attackers using phishing domains and look alike websites",
+                  "Attackers using fake instagram / LinkedIn / Telegram accounts for demanding fund transfer",
+                  "Illegitimate look alike Apps",
+                  "Sell of counterfeit products on marketplaces",
+                  "phishing email campaigns using Phishing websites and fake domains to hack end users"
+                ],
+                "keyFeatures": [
+                  "Visibility of phishing domains & look alike websites",
+                  "Visibility of look alike Apps",
+                  "Visibility of Social engineering happening using corporate brand name",
+                  "Visiblity of social engineering happening on business leaders and BODs",
+                  "Visibility of counterfeit activities happening online",
+                  "Risk scoring",
+                  "Take down services offered by technical and legal experts"
+                ]
+              },
+              {
+                "name": "TPRM",
+                "technology": "TPRM",
+                "oem": "SAFE SECURITY",
+                "useCases": [
+                  "Vendor Risk Assessment",
+                  "Vendor Risk Mgmt",
+                  "Cyber Risk Valuation for cyber insurance"
+                ],
+                "keyFeatures": [
+                  "Outside-In as well as Inside-out scanning",
+                  "Questionnair based assessment",
+                  "Uses Zero Trust Controls to assess third party risk impact",
+                  "AI powered risk quantification",
+                  "Vendors get access to Safe One Platform",
+                  "TP prioritization based on risk to business",
+                  "Pricing model independent of vendor count"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "managed-security-services",
+        "title": "Managed Security Services",
+        "description": "Comprehensive managed security services for your organization",
+        "mythology": "Krishna's Divine Vision",
+        "domains": []
+      },
+      {
+        "id": "cyber-awareness-training",
+        "title": "Cyber Awareness & Training",
+        "description": "Comprehensive cyber awareness and training programs",
+        "mythology": "Guru Dronacharya Training",
+        "domains": [
+          {
+            "name": "CYBER AWARENESS",
+            "products": [
+              {
+                "name": "Phishing Simulation & awareness",
+                "technology": "Human Firewall",
+                "oem": "Infosec Ventures",
+                "useCases": [
+                  "Employee Awareness Program",
+                  "Security compliances (RBI / IRDA / SEBI, etc.)"
+                ],
+                "keyFeatures": [
+                  "Phishing simulation platform",
+                  "Gamified approach",
+                  "Wide range of phishing templates",
+                  "vCRO",
+                  "Reporter button",
+                  "Post delivery email scanning"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "emerging-tech-security",
+        "title": "Emerging Tech Security",
+        "description": "Security solutions for emerging technologies",
+        "mythology": "Hanuman's Intelligence",
+        "domains": [
+          {
+            "name": "INFRA",
+            "products": [
+              {
+                "name": "Asset Discovery",
+                "technology": "Device42",
+                "oem": "Device42 Inc",
+                "useCases": [
+                  "Asset Auto Discovery / Visibility",
+                  "ITAM & Inventory mgmt",
+                  "Data Center Monitoring",
+                  "Cloud Migration",
+                  "Capacity Planning",
+                  "Asset Audit / License Compliance Audit",
+                  "CMDB"
+                ],
+                "keyFeatures": [
+                  "Scheduled Auto Discovery",
+                  "CMDB",
+                  "Pictoral View of DC assets",
+                  "Hardware & Software inventory Mgmt",
+                  "Application dependancy mapping",
+                  "DC Audit Compliance Reporting",
+                  "Storage Discovery"
+                ]
+              },
+              {
+                "name": "CSPM",
+                "technology": "ION",
+                "oem": "Cy5.io",
+                "useCases": [
+                  "Single plane visibility for Multi Cloud environment",
+                  "Visibility of cloud misconfigurations",
+                  "Cloud Risk Mgmt"
+                ],
+                "keyFeatures": [
+                  "Complatible with AWS, Azure, GCP",
+                  "Continuous security checks",
+                  "600+ checks and use cases",
+                  "Cloud native & scalable",
+                  "Contextual intelligence",
+                  "Serverless architecture"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "consulting-services",
+        "title": "Consulting Services",
+        "description": "Expert consulting services for your security needs",
+        "mythology": "Vidura's Wisdom",
+        "domains": []
+      }
+    ]
+  }
